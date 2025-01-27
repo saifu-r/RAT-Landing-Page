@@ -2683,4 +2683,32 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
   }
 }
 
+
+/* single product */
+
+.ud-single-product {
+  border: 1px solid #8d0e17;
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px 10px 40px 10px;
+  position: relative;
+  background-color: #000000;
+}
+
+.ud-single-product-btn {
+  border-radius: 30px;
+  padding: 15px 40px;
+  border: 1px solid #d4deff;
+  color: var(--primary-color);
+  background: var(--white);
+}
+
+.ud-single-product-btn:hover{
+  color: var(--white);
+  border-color: var(--primary-color);
+  background: var(--primary-color);
+  font-family: "Press Start 2P", serif;
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=ud-styles.css.map */
