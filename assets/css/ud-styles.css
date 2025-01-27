@@ -794,7 +794,7 @@ p {
   top: 0;
   left: 0;
   border-radius: 14px;
-  background: var(--primary-color);
+  background: var(--body-color);
   opacity: 0.2;
   z-index: -1;
   -webkit-transform: rotate(23deg);
@@ -2693,6 +2693,7 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
   padding: 10px 10px 40px 10px;
   position: relative;
   background-color: #000000;
+  margin-top: 10px;
 }
 
 .ud-single-product-btn {
@@ -2703,12 +2704,39 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
   background: var(--white);
 }
 
-.ud-single-product-btn:hover{
+.ud-single-product-btn:hover {
   color: var(--white);
   border-color: var(--primary-color);
   background: var(--primary-color);
   font-family: "Press Start 2P", serif;
   cursor: pointer;
 }
+
+.ud-hero-video {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.ud-more-products {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+
+}
+
+.ud-more-products a{
+  color: var(--body-color);
+}
+
+.ud-more-products:hover {
+  text-decoration: underline;
+}
+
+
 
 /*# sourceMappingURL=ud-styles.css.map */
