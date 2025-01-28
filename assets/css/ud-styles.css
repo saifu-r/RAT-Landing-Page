@@ -12,6 +12,7 @@
 ===========================*/
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
 
 /* font-family: "Press Start 2P", serif; */
 :root {
@@ -597,19 +598,31 @@ p {
 
 .ud-hero-content .ud-hero-desc {
   font-weight: normal;
-  font-size: 20px;
-  line-height: 35px;
+  font-size: 10px;
+  line-height: 25px;
   text-align: center;
-  color: var(--white);
-  opacity: 0.8;
+  
+  /* opacity: 0.8; */
   max-width: 600px;
   margin: auto;
   margin-bottom: 30px;
+
+   animation: flicker 1.5s infinite alternate;
+ text-transform: uppercase;
+  font-family: 'Press Start 2P', monospace;
+  color: #ff0000;
+  text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000;
+}
+
+@keyframes flicker {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
 }
 
 @media (max-width: 767px) {
   .ud-hero-content .ud-hero-desc {
-    font-size: 16px;
+    font-size: 8px;
     line-height: 30px;
   }
 }
@@ -735,7 +748,7 @@ p {
 
 .ud-section-title h2 {
   font-weight: 700;
-  font-size: 42px;
+  font-size: 35px;
   line-height: 55px;
   text-transform: capitalize;
   color: var(--heading-color);
@@ -1050,14 +1063,119 @@ p {
   font-family: "Press Start 2P", serif;
 }
 
-/* ===== FAQ CSS ===== */
-.ud-faq {
+/* ===== FAQ CSS ===== */.ud-faq {
   padding-top: 120px;
   padding-bottom: 90px;
-  background: #000000;
+  background: linear-gradient(145deg, #0d0d0d, #1c1c1c);
+  color: #ffffff;
   position: relative;
   z-index: 1;
+  overflow: hidden;
+}
 
+.ud-faq .shape {
+  position: absolute;
+  z-index: -1;
+  left: -50px;
+  bottom: -50px;
+  width: 600px;
+  height: 600px;
+  background: rgba(48, 86, 211, 0.3);
+  filter: blur(150px);
+  border-radius: 50%;
+}
+
+.ud-single-faq {
+  background: #121212;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.ud-single-faq:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 15px 45px rgba(48, 86, 211, 0.5);
+  background: linear-gradient(145deg, #1c1c1c, #232323);
+}
+
+.ud-single-faq .ud-faq-btn {
+  text-align: left;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  border: none;
+  background: transparent;
+  font-weight: 600;
+  font-size: 18px;
+  color: #ffffff;
+  font-family: "Press Start 2P", serif;
+  padding: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.ud-single-faq .ud-faq-btn:hover {
+  color: #30d3f1;
+  animation: flicker 0.15s infinite;
+}
+
+.ud-single-faq .ud-faq-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: #30d3f1;
+  transform: scaleY(0);
+  transition: all 0.4s ease;
+}
+
+.ud-single-faq:hover .ud-faq-btn::before {
+  transform: scaleY(1);
+}
+
+@keyframes flicker {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.ud-single-faq .ud-faq-btn.collapsed span.icon i {
+  transform: rotate(0deg);
+}
+
+.ud-single-faq .ud-faq-btn span.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: rgba(48, 86, 211, 0.1);
+  border-radius: 10px;
+  color: #30d3f1;
+  margin-right: 24px;
+  box-shadow: 0px 0px 10px rgba(48, 86, 211, 0.5);
+}
+
+.ud-single-faq .ud-faq-btn span.icon i {
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.ud-single-faq .ud-faq-body {
+  padding: 0px 30px 40px 95px;
+  color: #eaeaea;
+  font-family: "Roboto", sans-serif;
 }
 
 @media (max-width: 767px) {
@@ -1065,92 +1183,16 @@ p {
     padding-top: 80px;
     padding-bottom: 50px;
   }
-}
-
-.ud-faq .shape {
-  position: absolute;
-  z-index: -1;
-  left: 0;
-  bottom: 0;
-}
-
-.ud-single-faq {
-  background: var(--white);
-  border: 1px solid #f3f4fe;
-  -webkit-box-shadow: 0px 20px 95px rgba(201, 203, 204, 0.3);
-  box-shadow: 0px 20px 95px rgba(201, 203, 204, 0.3);
-  border-radius: 10px;
-  margin-bottom: 30px;
-}
-
-.ud-single-faq .ud-faq-btn {
-  text-align: left;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border: none;
-  background: transparent;
-  font-weight: 600;
-  font-size: 18px;
-  color: var(--heading-color);
-  font-family: "Press Start 2P", serif;
-  opacity: 0.88;
-  padding: 30px;
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1199px),
-(max-width: 767px) {
+  
   .ud-single-faq .ud-faq-btn {
     padding: 15px;
   }
-}
 
-.ud-single-faq .ud-faq-btn.collapsed span.icon i {
-  -webkit-transform: rotate(0deg);
-  transform: rotate(0deg);
-}
-
-.ud-single-faq .ud-faq-btn span.icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  background: rgba(48, 86, 211, 0.06);
-  border-radius: 10px;
-  color: var(--primary-color);
-  margin-right: 24px;
-}
-
-.ud-single-faq .ud-faq-btn span.icon i {
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-.ud-single-faq .ud-faq-body {
-  padding: 0px 30px 40px 95px;
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1199px),
-(max-width: 767px) {
   .ud-single-faq .ud-faq-body {
     padding: 0px 16px 20px 82px;
   }
 }
+
 
 /* ===== Testimonials CSS ===== */
 .ud-testimonials {
@@ -2697,20 +2739,46 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
 }
 
 .ud-single-product-btn {
-  border-radius: 30px;
+  border-radius: 0; /* Sharp rectangular shape for a techy look */
   padding: 15px 40px;
-  border: 1px solid #d4deff;
-  color: var(--primary-color);
-  background: var(--white);
+  border: 2px solid #ff0000; /* Neon red border */
+  color: #ff0000;
+  background: black;
+  font-family: "Press Start 2P", serif;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  text-align: center;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+  box-shadow: 0 0 5px #ff0000, 0 0 15px #ff0000;
+}
+
+.ud-single-product-btn:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 300%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 0, 0, 0.5), transparent);
+  transform: skewX(25deg);
+  transition: 0.5s;
 }
 
 .ud-single-product-btn:hover {
-  color: var(--white);
-  border-color: var(--primary-color);
-  background: var(--primary-color);
-  font-family: "Press Start 2P", serif;
+  color: black;
+  background: #ff0000;
+  border-color: #ff0000;
   cursor: pointer;
+  box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
 }
+
+.ud-single-product-btn:hover:before {
+  left: 100%;
+}
+
 
 .ud-hero-video {
   padding: 0;
@@ -2720,6 +2788,12 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+@media (max-width: 767px){
+  .ud-hero-video video{
+    width: 90%;
+  }
 }
 
 .ud-more-products {
