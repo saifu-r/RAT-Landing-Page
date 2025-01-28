@@ -562,15 +562,23 @@ p {
   padding-top: 180px;
 }
 
+.ud-hero::before{
+  background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+}
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .ud-hero {
     padding-top: 160px;
+    height: 80vh;
   }
+
+
 }
 
 @media (max-width: 767px) {
   .ud-hero {
     padding-top: 130px;
+    height: 80vh;
   }
 }
 
@@ -2814,9 +2822,12 @@ only screen and (min-width: 1200px) and (max-width: 1399px) {
   width: 100%;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 900px) {
   .ud-hero-video video {
     width: 90%;
+    position: absolute;
+    bottom: 180px;
+
   }
 }
 
