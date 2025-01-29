@@ -1,25 +1,42 @@
-# Play - Free HTML Template for Startup, Apps and SaaS
+# Craxs RAT - Remote Access Trojan Website
 
-Play is an open-source and free bootstrap 5 based HTML template created by the UIdeck team. It's a part of our new initiative to give back to the community and create some impactful open source projects.
+Craxs RAT is a fully functional and user-friendly website developed to showcase and sell advanced RAT (Remote Access Trojan) software. This project was commissioned through Fiverr and has been tailored to meet the client’s requirements for a streamlined and engaging user experience.
 
-This template is designed and developed in such a way so, that almost anyone can use it for almost any kind of website or landing pages such as SaaS, Startup, Business, Apps, Software and Agency, etc.
+## Project Overview
+This website allows potential customers to:
+- Explore detailed information about various RAT software.
+- View key features and benefits of the available products.
+- Seamlessly purchase RAT software directly from the platform.
 
-Play comes with all essential sections and elements a complete website needs, additionally, we also created some separate pages including blogs, login, 404, and some other essential pages from homepage sections.
+## Features
+- **Hero Section:** Captivating introduction with a high-quality background image and dynamic text.
+- **RAT Features:** Highlighting essential capabilities of the RAT software.
+- **Product Listings:** Comprehensive display of available RAT software with prices and detailed information.
+- **FAQs Section:** Frequently asked questions to address user concerns.
+- **Footer:** Essential contact information and additional navigation links.
 
-### This template crafted using 🥞 [TailGrids](https://tailgrids.com/) UI components (design)
+## Technologies Used
+- **Frontend:** Angular 17 with dynamic content and animations.
+- **UI Framework:** Tailwind CSS for responsive design.
+- **Backend:** Firebase integration for data handling and purchase functionalities.
+- **Payment Gateway:** Integrated for secure and reliable transactions.
 
+## Demo
+🚀 [View Live Demo](#)  
+📦 [Source Code on GitHub](#)
 
-### [🚀 View Demo](https://preview.uideck.com/items/play-bootstrap/)
+## Key Sections
+- **Landing Page:** Engaging content, RAT feature highlights, and product display.
+- **Products List:** Detailed descriptions and prices.
+- **FAQs:** Common questions answered for customer convenience.
+- **Purchase Functionality:** Secure checkout and payment process.
 
-### [⬇️ Download Now](https://links.uideck.com/play-bootstrap-download)
+## License
+This project is exclusively developed for the client and is proprietary. Redistribution or replication without permission is prohibited.
 
-[![playbootstrap-demo](https://uideck.com/wp-content/uploads/2021/09/play-bootstrap.jpg)](https://preview.uideck.com/items/play-bootstrap/)
+## Support
+If you encounter issues or have suggestions, feel free to open an issue on the [GitHub Repository](#). You can also support this project by giving it a star ⭐.
 
+---
+Thank you for exploring Craxs RAT! For further queries, reach out through the contact form on the website.
 
-
-## 📃 License
-Play is an open-source template, you can use it with your personal or commercial projects without any attribution or backlink.
-
-## 💙 Support
-You can always support this project by [Starring🌟 This Repository](https://github.com/uideck/play-bootstrap) 
-and sharing with friends. Also open an issue if you find bug or feel free to contribute by pull requests after fixing any issue or adding more values.
