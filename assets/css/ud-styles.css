@@ -967,7 +967,7 @@ p {
 /* ===== Pricing CSS ===== */
 .ud-pricing {
   padding-top: 120px;
-  padding-bottom: 90px;
+  /* padding-bottom: 90px; */
 }
 
 @media (max-width: 767px) {
@@ -1601,7 +1601,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
 .ud-footer {
   background: var(--heading-color);
   font-family: "Press Start 2P", serif;
-  padding-top: 100px;
+  /* padding-top: 100px; */
   position: relative;
   z-index: 1;
   overflow: hidden;

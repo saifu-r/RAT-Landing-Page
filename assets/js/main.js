@@ -1,6 +1,24 @@
 (function () {
   "use strict";
 
+  // Load external components
+  const loadComponent = (selector, file) => {
+    fetch(file)
+      .then((response) => response.text())
+      .then((data) => {
+        document.querySelector(selector).innerHTML = data;
+      })
+      .catch((err) => console.error(`Error loading ${file}:`, err));
+  };
+
+  // Insert components
+  document.addEventListener("DOMContentLoaded", () => {
+    loadComponent("header", "components/header.html");
+    loadComponent("footer", "components/footer.html");
+    loadComponent("#faqs", "components/faq.html");
+    loadComponent("#testimonials", "components/testimonials.html");
+  });
+
   // ======= Sticky
   window.onscroll = function () {
     const ud_header = document.querySelector(".ud-header");
